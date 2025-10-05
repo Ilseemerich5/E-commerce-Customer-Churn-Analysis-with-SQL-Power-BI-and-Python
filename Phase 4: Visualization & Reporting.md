@@ -4,7 +4,7 @@
 
 This phase presents the insights obtained from the analysis through an **interactive Power BI dashboard**. Stakeholders can explore customer churn behavior on an Indonesian e-commerce platform dynamically and intuitively.
 
-🔗 **View the dashboard here:**  
+**View the dashboard here:**  
 [Open Dashboard in Power BI](https://app.powerbi.com/groups/me/reports/d37aa858-94ea-4e65-b74a-9e970df48d61/79d286c3418c04c89a05?experience=power-bi)
 
 ---
