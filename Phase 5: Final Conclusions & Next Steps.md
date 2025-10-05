@@ -29,3 +29,14 @@
 
 **Summary:**  
 The analysis supports recommendations for **retention strategies, demographic segmentation, and catalog optimization**, focusing on **fostering loyalty among high-value customers**.
+
+---
+
+## Next Steps
+
+- **Develop predictive churn models** using machine learning (e.g., Random Forest) to anticipate at-risk customers.  
+- **Optimize retention strategies** tailored to high-value and VIP customers.  
+- **Enhance product assortment** by reducing low-performing items and promoting high-potential products.  
+- **Diversify promotional campaigns** to increase engagement across multiple codes and segments.  
+- **Target marketing initiatives** toward young female adults (25–34 years) while exploring growth opportunities in underrepresented segments.  
+- **Continuous monitoring** via the Power BI dashboard to track churn, revenue, and promotional effectiveness in real-time.
