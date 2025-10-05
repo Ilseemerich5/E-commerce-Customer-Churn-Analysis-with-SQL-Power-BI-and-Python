@@ -20,4 +20,5 @@ Retaining existing customers is more cost-effective than acquiring new ones, mak
 
 ## Objectives
 
-- Identify behavioral patterns that differentiate active and inactive customers, including purchase frequency, webs
+- Identify behavioral patterns that differentiate active and inactive customers, including purchase frequency, website engagement, and response to promotions.
+- Develop an interactive Power BI dashboard summarizing key metrics and supporting strategic decision-making by stakeholders.
