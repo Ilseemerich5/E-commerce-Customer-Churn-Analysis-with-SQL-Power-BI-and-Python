@@ -12,11 +12,10 @@ This phase presents the insights obtained from the analysis through an **interac
 ## Dashboard Screenshots (Filtered for 2022 Data)
 
 ### Overview
-![Dashboard Overview](screenshots/Dashboard Overview (2022).png)
+![Dashboard Overview](https://raw.githubusercontent.com/Ilseemerich5/E-commerce-Customer-Churn-Analysis-with-SQL-Power-BI-and-Python/main/Dashboard%20Overview%20(2022).png)
 
 ### Products & Discounts
-![Dashboard Products & Discounts](screenshots/Dashboard Products & Discounts (2022).png)
-
+![Dashboard Products & Discounts](https://raw.githubusercontent.com/Ilseemerich5/E-commerce-Customer-Churn-Analysis-with-SQL-Power-BI-and-Python/main/Dashboard%20Products%20&%20Discounts%20(2022).png)
 ---
 
 ## Data Transformations and Preparations
