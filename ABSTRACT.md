@@ -13,6 +13,3 @@ A churn rule was established based on customers’ purchase history and transact
 To communicate the findings, a Power BI dashboard was developed, featuring age-range segmentation created in M (Power Query), dynamic measures implemented in DAX, and tables generated with CREATE VIEW in SQL to ensure consistent and reliable analysis.
 
 The next steps I recommend include developing a predictive model using Random Forest to anticipate churn in the coming months, optimizing retention strategies, and enhancing customer loyalty.
-
-**Key KPIs:** churn rate, purchase frequency, website engagement, and retention by customer segment.  
-This project demonstrates how a structured workflow of **ETL → EDA → Visualization → Modeling** can transform complex data into actionable business insights.
