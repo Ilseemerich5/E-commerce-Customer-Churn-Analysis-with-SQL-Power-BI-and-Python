@@ -13,7 +13,7 @@ The objective of this phase was to integrate and prepare the different data sour
   - This script merged the final two columns into a single column, ensuring a consistent 10-column structure across all rows.
 
 ### 2. Data Cleaning and Transformation
-- Columns in JSON format (product_id, quantity, item_price) were transformed into structured and analyzable data using Python.
+- Columns in JSON format (product_id, quantity, item_price) were transformed into structured and analyzable data using SQL.
 
 ### 3. Key Variable Generation
 - **total_purchases**: Total number of purchases per customer.
