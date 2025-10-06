@@ -6,7 +6,7 @@
 - **Total Revenue:** Cumulative spend reached **$446.55M** over the period, showing that the customer base remains highly profitable.
 - **Top Customers:** The top 10 customers generated **$549M** with 882 transactions, showing their significant impact on the business. One customer spent over **$67.9M** in 95 purchases.
 - **Demographics:** 64% of customers are women, with the strongest age range **25–34 years (43.9%)**, followed by **35–44 years (39.4%)**, indicating a clear concentration in young adults.
-- **Location:** Transactions are mainly concentrated in Indonesia, highlighting priority markets in the region.
+- **Location:** Transactions are mainly concentrated in Jakarta Raya and Jawa Barat.
 - **Payment Methods:** Credit card and OVO are the most used, although failed transactions were detected. Average spending is higher on digital platforms (e.g., LinkAja).
 
 ---
