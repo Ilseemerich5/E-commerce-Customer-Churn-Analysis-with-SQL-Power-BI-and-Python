@@ -22,15 +22,18 @@ This phase presents the insights obtained from the analysis through an **interac
 ## Data Transformations and Preparations
 
 ### 1. Power Query (M)
-- **Creation of “Age Range” column** to segment customers:
+- **Creation of Age and Age Range column** to segment customers:
 
 ```m
-if [Edad] < 18 then "Menor de 18"
-else if [Edad] <= 24 then "18-24"
-else if [Edad] <= 34 then "25-34"
-else if [Edad] <= 44 then "35-44"
-else if [Edad] <= 54 then "45-54"
-else "55+"
+= Table.AddColumn(public_customer, "age", each Date.Year(#date(2022, 7, 31)) - Date.Year([birthdate]))
+
+= Table.AddColumn(#"Personnalisée ajoutée", "age_range", each if [age] >= 5 and [age] <= 14 then "5-14"
+else if [age] >= 15 and [age] <= 24 then "15-24"
+else if [age] >= 25 and [age] <= 34 then "25-34"
+else if [age] >= 35 and [age] <= 44 then "35-44"
+else if [age] >= 45 and [age] <= 54 then "45-54"
+else if [age] >= 55 and [age] <= 70 then "55-70"
+else "Out of Range")
 ```
 ---
 
@@ -41,36 +44,19 @@ A dedicated **Measures Table** was created in Power BI to store all key calculat
 
 ### Measures included:
 
-- `TotalIngresos := SUM(Transactions[TotalPrice])`
-- `ClientesActivos := CALCULATE(DISTINCTCOUNT(Customers[CustomerID]), Customers[Estado] = "Activo")`
-- `ChurnRate := DIVIDE(CALCULATE(DISTINCTCOUNT(Customers[CustomerID]), Customers[Estado] = "Inactivo"), DISTINCTCOUNT(Customers[CustomerID]))`
-- `% of Churn`
-- `Active customers`
-- `avg_amount_per_purchase`
-- `Churn target`
-- `dif_product_purchased`
-- `First Transaction Recorded`
-- `Inactive customers`
-- `Most Recent Transaction`
-- `Total Rows Customers`
-- `Total Transactions`
-- `total_amount`
+- `total_amount = SUM('public transactions'[total_amount])`
+- `Active customers = CALCULATE (COUNTROWS ( 'public customer'),'public customer'[churn_status] = "active")`
+- `% of Churn = DIVIDE( CALCULATE(COUNTROWS('public customer'),'public customer'[churn_status] = "inactive"),COUNTROWS(FILTER('public customer','public customer'[churn_status] IN {"active", "inactive"})))`
+- `avg_amount_per_purchase = AVERAGE('public transactions'[total_amount])`
+- `dif_product_purchased = DISTINCTCOUNT('public transactions'[product_id])`
+- `First Transaction Recorded = MIN ('public transactions'[transaction_date])`
+- `Inactive customers = CALCULATE (COUNTROWS ( 'public customer'),'public customer'[churn_status] = "inactive")`
+- `Most Recent Transaction =MAX ( 'public transactions'[transaction_date])`
+- `Total Rows Customers = COUNTROWS('public customer')`
+- `Total Transactions = COUNTROWS('public transactions')`
 
-### Example of some DAX formulas:
 
-```DAX
-TotalRevenue := SUM(Transactions[TotalPrice])
 
-ActiveCustomers := CALCULATE(
-    DISTINCTCOUNT(Customers[CustomerID]), 
-    Customers[Status] = "Active"
-)
-
-ChurnRate := DIVIDE(
-    CALCULATE(DISTINCTCOUNT(Customers[CustomerID]), Customers[Status] = "Inactive"),
-    DISTINCTCOUNT(Customers[CustomerID])
-)
-```
 ## 3. SQL Integration
 
 Views (`CREATE VIEW`) added to Power BI for consistent and efficient analysis:
@@ -88,10 +74,4 @@ Views (`CREATE VIEW`) added to Power BI for consistent and efficient analysis:
 - Purchase distribution by category.
 - Geographic map of active and inactive customers.
 
-### Dashboard Conclusion
-
-- Age range segmentation identifies priority customer groups.
-- Measures Table in DAX provides all key metrics dynamically in one place.
-- SQL views ensure data consistency and efficient calculations.
-- The dashboard supports strategic retention and engagement decisions.
 
