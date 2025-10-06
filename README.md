@@ -1,6 +1,6 @@
 # E-commerce-Customer-Churn-Analysis-with-SQL-Power-BI-and-Python
 ## Description
-This project analyses customer behavior on an Indonesian e-commerce platform to identify factors driving churn and propose effective retention strategies. The analysis covers over 850,000 transactions from 2016 to 2022, integrating 4 primary data sources: customers, transactions, products, and clickstream data.  
+This project analyzes customer behavior on an Indonesian e-commerce platform to identify factors driving churn and propose effective retention strategies. The analysis covers over 850,000 transactions from 2016 to 2022, integrating 4 primary data sources: customers, transactions, products, and clickstream data.  
 
 The workflow follows a structured process: **Business Understanding → ETL → EDA → Visualization → Modeling**, transforming raw data into actionable business insights.
 
